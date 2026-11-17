@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+/* ---------- زرار اللغة (EN / AR) ---------- */
+.lang-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  letter-spacing: 0.03em;
+  color: var(--sm-muted, #5b7186);
+  cursor: pointer;
+}
+
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  color: var(--sm-navy, #143a5c);
+}
+
+/* ---------- العربي: الخط ---------- */
+[dir='rtl'] .login-page,
+[dir='rtl'] .register-page {
+  font-family: 'Noto Sans Arabic', 'Noto Sans', system-ui, sans-serif;
+}
+
+/* ---------- RTL: عكس العناصر اللي Bootstrap بيحطها يمين/شمال ---------- */
+
+/* Floating label */
+[dir='rtl'] .form-floating > label {
+  left: auto;
+  right: 0;
+  transform-origin: 100% 0;
+}
+
+[dir='rtl'] .form-floating > .form-control:focus ~ label,
+[dir='rtl'] .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  transform: scale(0.85) translateY(-0.5rem) translateX(-0.15rem);
+}
+
+/* Inputs + الأيقونة (الإيميل / العين) */
+[dir='rtl'] .login-field .form-control,
+[dir='rtl'] .register-field .form-control {
+  padding-right: 0.75rem;
+  padding-left: 2.75rem;
+}
+
+[dir='rtl'] .login-field__icon,
+[dir='rtl'] .register-field__icon {
+  right: auto;
+  left: 1rem;
+}
+
+/* النص الصغير جوه حقل الباسورد (Register) */
+[dir='rtl'] .register-field__hint {
+  left: 2.5rem;
+  right: 0.75rem;
+}
+
+/* صناديق Remember Me / الموافقة على الشروط */
+[dir='rtl'] .login-remember,
+[dir='rtl'] .register-check {
+  padding-left: 1rem;
+  padding-right: 2.4rem;
+}
+
+[dir='rtl'] .form-check .form-check-input {
+  float: right;
+  margin-left: 0;
+  margin-right: -1.5em;
+}

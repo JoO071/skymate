@@ -1,0 +1,86 @@
+export const translations = {
+  en: {
+    // Shared
+    backHome: '← Back to Home',
+    heroBadge: 'YOUR NEXT CHAPTER',
+    heroTitle: 'Less planning friction. More Istanbul.',
+    heroText: 'One thoughtful place for your itinerary, budget, discoveries and conversations.',
+    heroCaption: 'Istanbul, Türkiye · Destination inspiration',
+    email: 'Email address',
+    password: 'Password',
+    showPassword: 'Show password',
+    hidePassword: 'Hide password',
+    designNote:
+      'Design example • Account details shown are fictional. No authentication request is sent.',
+    projectLine: 'SkyMate · University graduation-project proposal',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    about: 'About',
+
+    // Login
+    loginTitle: 'Welcome back.',
+    loginSub: 'Your plans, places and possibilities are right here.',
+    rememberMe: 'Remember Me',
+    forgot: 'Forgot Password?',
+    loginBtn: 'Login',
+    newTo: 'New to SkyMate?',
+    signUp: 'Sign Up',
+
+    // Register
+    registerTitle: 'Make room for your next journey.',
+    registerSub: 'Create your SkyMate account to shape and save your travel plans.',
+    fullName: 'Full name',
+    confirmPassword: 'Confirm password',
+    passwordHint: 'Use at least 12 characters. Mix words, numbers and symbols.',
+    agree: 'I agree to the {terms} and {privacy}.',
+    termsLink: 'Terms',
+    privacyLink: 'Privacy Policy',
+    prefsNote: 'Your preferences help personalize suggestions. You can change them anytime.',
+    createAccount: 'Create Account',
+    haveAccount: 'Already have an account?',
+    loginLink: 'Login',
+    mismatch: 'Passwords do not match.',
+  },
+
+  ar: {
+    // Shared
+    backHome: '→ العودة إلى الرئيسية',
+    heroBadge: 'فصلك القادم',
+    heroTitle: 'تخطيط أسهل. إسطنبول أكثر.',
+    heroText: 'مكان واحد متكامل لخط سير رحلتك وميزانيتك واكتشافاتك ومحادثاتك.',
+    heroCaption: 'إسطنبول، تركيا · إلهام للوجهات',
+    email: 'البريد الإلكتروني',
+    password: 'كلمة المرور',
+    showPassword: 'إظهار كلمة المرور',
+    hidePassword: 'إخفاء كلمة المرور',
+    designNote: 'نموذج تصميم • بيانات الحساب المعروضة وهمية ولا يتم إرسال أي طلب مصادقة.',
+    projectLine: 'SkyMate · مقترح مشروع تخرج جامعي',
+    privacy: 'الخصوصية',
+    terms: 'الشروط',
+    about: 'من نحن',
+
+    // Login
+    loginTitle: 'أهلًا بعودتك.',
+    loginSub: 'خططك وأماكنك وإمكانياتك كلها هنا.',
+    rememberMe: 'تذكّرني',
+    forgot: 'نسيت كلمة المرور؟',
+    loginBtn: 'تسجيل الدخول',
+    newTo: 'جديد على SkyMate؟',
+    signUp: 'إنشاء حساب',
+
+    // Register
+    registerTitle: 'خصّص مكانًا لرحلتك القادمة.',
+    registerSub: 'أنشئ حسابك على SkyMate لتصميم خطط سفرك وحفظها.',
+    fullName: 'الاسم الكامل',
+    confirmPassword: 'تأكيد كلمة المرور',
+    passwordHint: 'استخدم 12 حرفًا على الأقل، وامزج بين الكلمات والأرقام والرموز.',
+    agree: 'أوافق على {terms} و{privacy}.',
+    termsLink: 'الشروط',
+    privacyLink: 'سياسة الخصوصية',
+    prefsNote: 'تساعد تفضيلاتك على تخصيص الاقتراحات، ويمكنك تغييرها في أي وقت.',
+    createAccount: 'إنشاء الحساب',
+    haveAccount: 'لديك حساب بالفعل؟',
+    loginLink: 'تسجيل الدخول',
+    mismatch: 'كلمتا المرور غير متطابقتين.',
+  },
+}
