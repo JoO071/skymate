@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+.sm-nav,
+.sm-drawer {
+  --sm-navy: #143a5c;
+  --sm-teal: #1aa593;
+  --sm-border: #e3eaf1;
+  font-family: 'Noto Sans', 'Noto Sans Arabic', system-ui, sans-serif;
+}
+
+/* ---------- Bar ---------- */
+.sm-nav--overlay {
+  position: absolute;
+  top: 0;
+  inset-inline: 0;
+  z-index: 20;
+  color: #fff;
+}
+
+.sm-nav--solid {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  color: var(--sm-navy);
+  border-bottom: 1px solid var(--sm-border);
+}
+
+.sm-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.sm-nav__burger {
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 0.25rem;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.sm-nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.sm-nav__logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--sm-teal);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sm-nav__links {
+  gap: 1.1rem;
+}
+
+@media (min-width: 1200px) {
+  .sm-nav__links {
+    gap: 1.75rem;
+  }
+}
+
+.sm-nav__links a.is-active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+.sm-nav__links a,
+.sm-nav__login,
+.sm-nav__user {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.92;
+}
+
+.sm-nav__user,
+.sm-nav__login {
+  font-weight: 500;
+}
+
+.sm-nav__links a:hover,
+.sm-nav__login:hover,
+.sm-nav__user:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.sm-nav .lang-btn {
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+/* ---------- Buttons ---------- */
+.sm-btn {
+  background: var(--sm-navy);
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sm-btn:hover {
+  background: #0f2e4a;
+  color: #fff;
+}
+
+.sm-nav--overlay .sm-btn {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.sm-btn--outline {
+  background: transparent;
+  color: var(--sm-navy);
+  border-color: var(--sm-navy);
+}
+
+.sm-btn--outline:hover {
+  background: var(--sm-navy);
+  color: #fff;
+}
+
+/* ---------- Drawer ---------- */
+.sm-drawer__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 30, 50, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 99;
+}
+
+.sm-drawer__backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sm-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: min(320px, 86vw);
+  background: #fff;
+  color: var(--sm-navy);
+  z-index: 100;
+  padding: 1.25rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.28s ease;
+}
+
+[dir='rtl'] .sm-drawer {
+  transform: translateX(100%);
+}
+
+.sm-drawer.is-open,
+[dir='rtl'] .sm-drawer.is-open {
+  transform: none;
+}
+
+.sm-drawer__user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  margin-bottom: 0.75rem;
+  background: #f4f8fb;
+  border: 1px solid var(--sm-border);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.sm-drawer__avatar {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sm-navy);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.sm-drawer__email {
+  font-size: 0.75rem;
+  color: #5b7186;
+}
+
+.sm-drawer__item {
+  display: block;
+  width: 100%;
+  text-align: start;
+  padding: 0.8rem 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--sm-navy);
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sm-drawer__item:hover {
+  background: #f4f8fb;
+}
+
+.sm-drawer__item--main {
+  background: #e8f7f3;
+  border: 1px solid var(--sm-teal);
+  font-weight: 600;
+}
+
+.sm-drawer__item--main:hover {
+  background: #dcf3ec;
+}
+
+.sm-drawer__logout {
+  margin-top: auto;
+  color: #c0392b;
+  border-top: 1px solid var(--sm-border);
+  border-radius: 0;
+}
