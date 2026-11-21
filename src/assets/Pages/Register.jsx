@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import heroImg from '../images/Istanbul.jpeg'
 import { useLang } from '../i18n/LanguageContext'
+import { useAuth } from '../auth/AuthContext'
 import '../Styles/Register.css'
 
 /* ---------- Small helpers ---------- */
@@ -63,6 +64,8 @@ function PasswordField({ id, label, value, onChange, hint, error, minLength }) {
 /* ---------- Page ---------- */
 function Register() {
   const { t, lang, toggleLang } = useLang()
+  const { register } = useAuth()
+  const navigate = useNavigate()
 
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -75,8 +78,9 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (mismatch) return
-    // TODO: اربطها بالـ API بعدين
-    console.log({ fullName, email, password, agree })
+    // TODO (Backend): ابعت البيانات للـ API، ولما ينجح نادي register(user)
+    register({ name: fullName, email })
+    navigate('/')
   }
 
   // "I agree to the {terms} and {privacy}." -> نص + لينكات (يشتغل مع ترتيب الجملة في العربي كمان)
