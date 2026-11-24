@@ -1,0 +1,32 @@
+[
+  {
+    "title": "What is SkyMate",
+    "content": "The SkyMate backend provides account authentication, read-only APIs for user-owned trips and itineraries, and a text-based Travel Assistant. It does not expose endpoints to create or edit trips.",
+    "isActive": true
+  },
+  {
+    "title": "Itineraries",
+    "content": "A stored trip can include its destination, dates, duration, group budget and currency, traveler count, pace, interests, and day-by-day activities. Activities may include times, locations, types, estimated costs, and a cost basis. Costs are planning estimates, not confirmed booking prices. The assistant uses backend-provided totals and does not recalculate money.",
+    "isActive": true
+  },
+  {
+    "title": "Travel Assistant (chat)",
+    "content": "The Travel Assistant is a text chat that replies in Arabic or English. Conversations belong to the authenticated user and can exist without a trip. When a message includes a trip ID, the backend verifies ownership and supplies that trip context for that message only; it never links the conversation to the trip. The assistant cannot create or change trips and does not accept voice or image input.",
+    "isActive": true
+  },
+  {
+    "title": "Accounts and saved trips",
+    "content": "The API scopes trip and conversation access to the authenticated account. Deleting a conversation permanently deletes its messages. This backend does not expose an account-deletion endpoint.",
+    "isActive": true
+  },
+  {
+    "title": "What SkyMate does not do",
+    "content": "This backend does not implement trip creation or editing, bookings, payments, maps or navigation, live tracking, visa processing, translation, or Airport Guidance. General travel advice is disabled by default. If enabled, the assistant must label it as general advice and must not state prices or opening hours as facts.",
+    "isActive": true
+  },
+  {
+    "title": "Data and AI usage",
+    "content": "The Travel Assistant sends the current message, recent conversation history, system instructions, and any authorized trip context for that message to the configured external AI provider. The backend does not add account email or phone fields to that request, but personal information typed into chat may be sent. Avoid sharing sensitive personal information. The assistant uses backend-calculated money figures and does not calculate them.",
+    "isActive": true
+  }
+]

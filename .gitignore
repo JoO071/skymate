@@ -1,2 +1,18 @@
 node_modules
 dist
+
+# .NET Build Files
+**/bin/
+**/obj/
+.vs/
+.nuget/
+.config/.dotnet/
+*.user
+*.suo
+*.csproj.user
+
+# Local secrets and certificates
+secrets.json
+*.pfx
+*.p12
+*.key
